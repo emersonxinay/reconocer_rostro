@@ -33,11 +33,13 @@ def reconocer_rostros():
             id_, conf = recognizer.predict(roi_gray)
 
             # Si la confianza es menor a cierto umbral (ajustable), mostrar el nombre correspondiente al ID reconocido
-            if conf < 70:
                 # Aquí puedes tener un diccionario o base de datos con los nombres correspondientes a cada ID
-                # Por ejemplo: nombres = {0: "Persona 1", 1: "Persona 2", ...}
+                # Por ejemplo: 
+                # nombres = {str(id_): "emerson", str(id_): "xinay", str(id_):"yesica"}
+            if conf < 70:
                 
                 nombre = "Persona " + str(id_)
+                
             else:
                 nombre = "Desconocido"
 
